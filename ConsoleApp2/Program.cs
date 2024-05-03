@@ -6,7 +6,9 @@
         {
             //LessonOne.Program.Start();
             //LessonTwo.Program.Start();
-            LessonThree.Program.Start();
+            //LessonThree.Program.Start();
+            StudyThree.Program.Start();
+            //LessonFour.Program.Start();
         }
     }
 }
