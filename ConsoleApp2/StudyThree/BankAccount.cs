@@ -2,8 +2,8 @@
 {
     internal class BankAccount
     {
-        private decimal _money;
-        private string _pinCode;
+        protected decimal _money;
+        protected string _pinCode;
         internal string Name { get; private set; }
 
         public BankAccount(decimal money, string pin, string name)
@@ -18,7 +18,7 @@
             return money >= 0;
         }
 
-        internal void Withdraw(string pin, decimal sum) //снять деньги
+        internal virtual void Withdraw(string pin, decimal sum) //снять деньги
         {
             if (pin == _pinCode)
             {
@@ -45,7 +45,7 @@
             }
         }
 
-        internal (bool, int) Deposit(string pin, decimal sum) //положить деньги
+        internal virtual (bool, int) Deposit(string pin, decimal sum) //положить деньги
         {
             if (pin == _pinCode)
             {
@@ -68,7 +68,7 @@
             }
         }
 
-        internal bool CheckBalance(string pin) //просмотреть сумму на счёте
+        internal virtual bool CheckBalance(string pin) //просмотреть сумму на счёте
         {
             if (pin == _pinCode)
             {
