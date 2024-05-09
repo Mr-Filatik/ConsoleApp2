@@ -27,15 +27,20 @@ namespace ConsoleApp2.LessonFive
         {
             while (true)
             {
-                int number = _console.Start(_manager.GetAssortiment());
-                var product = _manager.SelectProduct(number);
-                decimal money = _console.Enter(product.Name, product.Price);
-                while (money < product.Price)
-                {
-                    money += _console.Buy(money, product.Price);
-                }
-                _console.Final(product.Name);
+                var items = _manager.GetAssortiment();
+                _console.ProductShow(items, StartCooking);
             }
+        }
+
+        private void StartCooking(int number)
+        {
+            var product = _manager.SelectProduct(number);
+            decimal money = _console.Enter(product.Name, product.Price);
+            while (money < product.Price)
+            {
+                money += _console.Buy(money, product.Price);
+            }
+            _console.Final(product.Name);
         }
     }
 }

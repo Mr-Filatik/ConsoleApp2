@@ -10,7 +10,7 @@ namespace ConsoleApp2.LessonFive.PL
 {
     internal class CoffeeConsole
     {
-        internal int Start(Product[] items)
+        internal void ProductShow(Product[] items, Action<int> selectedProduct)
         {
             Console.WriteLine("Вот ассортимент!");
             foreach (var item in items)
@@ -18,14 +18,16 @@ namespace ConsoleApp2.LessonFive.PL
                 Console.WriteLine($"{item.Id}: {item.Name} - {item.Price}");
             }
             Console.WriteLine();
+            //разбить логические части
             Console.WriteLine("Выберите продукт!");
-            return int.Parse(Console.ReadLine());
+            selectedProduct(int.Parse(Console.ReadLine()));
         }
 
         internal decimal Enter(string name, decimal price)
         {
             Console.WriteLine($"Почти начали готовить {name}, нужно только оплатить...");
             Console.WriteLine();
+            //разбить логические части
             Console.WriteLine($"Внесите сумму (0 из {price})!");
             return decimal.Parse(Console.ReadLine());
         }
