@@ -10,7 +10,8 @@
             //StudyThree.Program.Start();
             //LessonFour.Program.Start();
             //LessonFive.Program.Start();
-            LessonSix.Program.Start();
+            //LessonSix.Program.Start();
+            LessonSeven.Program.Start();
         }
     }
 }
