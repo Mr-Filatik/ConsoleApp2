@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp2
+﻿using System.Net;
+
+namespace ConsoleApp2
 {
     internal class Program
     {
@@ -11,7 +13,8 @@
             //LessonFour.Program.Start();
             //LessonFive.Program.Start();
             //LessonSix.Program.Start();
-            LessonSeven.Program.Start();
+            //LessonSeven.Program.Start();
+            LessonEight.Program.Start();
         }
     }
 }
