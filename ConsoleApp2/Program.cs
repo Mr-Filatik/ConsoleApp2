@@ -1,4 +1,4 @@
-﻿using System.Net;
+﻿using Serilog;
 
 namespace ConsoleApp2
 {
@@ -6,6 +6,13 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .WriteTo.File("Logs/log-.txt",
+                    rollingInterval: RollingInterval.Day,
+                    rollOnFileSizeLimit: true)
+                .CreateLogger();
+
             //LessonOne.Program.Start();
             //LessonTwo.Program.Start();
             //LessonThree.Program.Start();
@@ -14,7 +21,8 @@ namespace ConsoleApp2
             //LessonFive.Program.Start();
             //LessonSix.Program.Start();
             //LessonSeven.Program.Start();
-            LessonEight.Program.Start();
+            //LessonEight.Program.Start();
+            LessonNine.Program.Start();
         }
     }
 }
