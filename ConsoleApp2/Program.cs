@@ -22,7 +22,8 @@ namespace ConsoleApp2
             //LessonSix.Program.Start();
             //LessonSeven.Program.Start();
             //LessonEight.Program.Start();
-            LessonNine.Program.Start();
+            //LessonNine.Program.Start();
+            LessonTen.Program.Start();
         }
     }
 }
